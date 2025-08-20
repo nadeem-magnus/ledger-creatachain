@@ -18,7 +18,7 @@
 # BOLOS_SDK IS  DEFINED	 	We use the plain Makefile for Ledger
 # BOLOS_SDK NOT DEFINED		We use a containerized build approach
 
-TESTS_JS_PACKAGE = "@zondax/ledger-cosmos-js"
+TESTS_JS_PACKAGE = "ledger-creatachain-js"
 TESTS_JS_DIR = $(CURDIR)/js
 
 ifeq ($(BOLOS_SDK),)

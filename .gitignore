@@ -99,3 +99,5 @@ fuzz-*.log
 
 .vscode/
 tests_zemu/yarn.lock
+
+myvenv

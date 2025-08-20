@@ -1,9 +1,9 @@
 [submodule "deps/ledger-secure-sdk"]
 	path = deps/ledger-secure-sdk
-	url = https://github.com/LedgerHQ/ledger-secure-sdk
+	url = https://github.com/nadeem-magnus/ledger-secure-sdk
 [submodule "js"]
 	path = js
-	url = https://github.com/Zondax/ledger-cosmos-js
+	url = https://github.com/creatachain/ledger-creatachain-js
 [submodule "deps/ledger-zxlib"]
 	path = deps/ledger-zxlib
-	url = https://github.com/nadeem-magnus/ledger-zxlib.git
+	url = https://github.com/nadeem-magnus/ledger-zxlib
