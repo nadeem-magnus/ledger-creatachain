@@ -101,3 +101,4 @@ fuzz-*.log
 tests_zemu/yarn.lock
 
 myvenv
+js
