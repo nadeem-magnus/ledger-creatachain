@@ -1,16 +1,12 @@
 {
   "name": "integration-tests",
-  "author": "Zondax GmbH",
+  "author": "Creatachain",
   "license": "Apache-2.0",
   "version": "1.0.0",
   "description": "",
   "types": "./dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zondax/ledger-cosmos"
-  },
   "keywords": [
-    "Zondax",
+    "creatachain",
     "Ledger"
   ],
   "scripts": {

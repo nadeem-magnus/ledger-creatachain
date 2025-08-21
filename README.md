@@ -1,17 +1,4 @@
-# Ledger Cosmos app
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GithubActions](https://github.com/cosmos/ledger-cosmos/actions/workflows/main.yml/badge.svg)](https://github.com/cosmos/ledger-cosmos/blob/main/.github/workflows/main.yaml)
-
----
-
-![zondax_light](docs/zondax_light.png#gh-light-mode-only)
-![zondax_dark](docs/zondax_dark.png#gh-dark-mode-only)
-
-_Please visit our website at [zondax.ch](zondax.ch)_
-
-You can also visit [Zondax Hub](https://hub.zondax.ch/cosmos) to test any of the versions of the app
-
----
+# Ledger Creatachain App
 
 This project contains the Cosmos app for Ledger Nano S, Nano S+, X and Stax.
 

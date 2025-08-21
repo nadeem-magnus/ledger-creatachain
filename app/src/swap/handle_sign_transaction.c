@@ -1,19 +1,3 @@
-/*******************************************************************************
- *   (c) 2016 Ledger
- *   (c) 2018 - 2023 Zondax AG
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- ********************************************************************************/
 #include "bignum.h"
 #include "crypto.h"
 #include "lib_standard_app/swap_lib_calls.h"
@@ -80,46 +64,6 @@ bool copy_transaction_parameters(create_transaction_parameters_t *sign_transacti
     return true;
 }
 
-/*
- * This function verifies that a received transaction follows the expected format
- * based on the current application mode (expert or normal). The verification
- * process includes checking the number of items in the transaction and validating
- * that the items at its respective display index matches the expected content.
- * If any item does not meet the expected criteria, the function will return an error.
- *
- * Expected transaction format:
- *
- * Expert Mode:
- * 0 | Chain ID : cosmoshub-4
- * 1 | Account : 3225600
- * 2 | Sequence : 0
- * 3 | Type : Send
- * 4 | Amount : 6000000 ATOM
- * 5 | From [1/2] : cosmos12fuhfs6juf3m47dgplrhdrkvdyn9wc2j
- * 5 | From [2/2] : mp4sw40
- * 6 | To [1/2] : cosmos1s3mu2eyc7ql5hrcqvuerfhxxfxs7ax4k
- * 7 | To [2/2] : zye8hz
- * 8 | Fee : 3093 ATOM
- * 9 | Gas : 123705
- *
- * Normal Mode:
- *
- * 0 | Type : Send
- * 1 | Amount : 6000000 ATOM
- * 2 | From [1/2] : cosmos12fuhfs6juf3m47dgplrhdrkvdyn9wc2j
- * 2 | From [2/2] : mp4sw40
- * 3 | To [1/2] : cosmos1s3mu2eyc7ql5hrcqvuerfhxxfxs7ax4k
- * 3 | To [2/2] : zye8hz
- * 4 | Fee : 3093 ATOM
- *
- * Verification Details:
- * - Each item's content will be checked against the predefined values for the
- *   corresponding display index.
- * - If any discrepancy is found (either in item count or content), the function
- *   will return an error.
-  * - The function will confirm that the number of items in the transaction
- *   matches the expected count for the current mode.
- */
 parser_error_t parser_msg_send(parser_context_t *ctx_parsed_tx, uint8_t displayIdx, uint8_t pageIdx, uint8_t pageCount){
     if (ctx_parsed_tx == NULL) {
         return parser_unexpected_error;
@@ -233,43 +177,6 @@ parser_error_t parser_msg_send(parser_context_t *ctx_parsed_tx, uint8_t displayI
     return parser_ok;
 }
 
-/*
- * This function verifies that a received transaction follows the expected format
- * based on the current application mode (expert or normal). The verification
- * process includes checking the number of items in the transaction and validating
- * that the items at its respective display index matches the expected content.
- * If any item does not meet the expected criteria, the function will return an error.
- *
- * Expected transaction format:
- *
- * Expert Mode:
- *   0 | Chain ID        : cosmoshub-4
- *   1 | Account         : 0
- *   2 | Sequence        : 1
- *   3 | Source Address  : cosmosaccaddr1d9h8qat5e4ehc5
- *   4 | Source Coins    : 10 atom
- *   5 | Dest Address    : cosmosaccaddr1da6hgur4wse3jx32
- *   6 | Dest Coins      : 10 atom
- *   7 | Memo            : testmemo
- *   8 | Fee             : 5 photon
- *   9 | Gas             : 10000
- *
- * Normal Mode:
- *   0 | Source Address  : cosmosaccaddr1d9h8qat5e4ehc5
- *   1 | Source Coins    : 10 atom
- *   2 | Dest Address    : cosmosaccaddr1da6hgur4wse3jx32
- *   3 | Dest Coins      : 10 atom
- *   4 | Memo            : testmemo
- *   5 | Fee             : 5 photon
- *
- * Verification Details:
- * - Each item's content will be checked against the predefined values for the
- *   corresponding display index.
- * - If any discrepancy is found (either in item count or content), the function
- *   will return an error.
-  * - The function will confirm that the number of items in the transaction
- *   matches the expected count for the current mode.
- */
 parser_error_t parser_simple_transfer(parser_context_t *ctx_parsed_tx, uint8_t displayIdx, uint8_t pageIdx, uint8_t pageCount){
     if (ctx_parsed_tx == NULL) {
         return parser_unexpected_error;

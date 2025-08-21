@@ -605,7 +605,7 @@
         ],
         "gas": "200000"
       },
-      "memo": "Zondax.ch",
+      "memo": "creatachain",
       "msgs": [
         {
           "type": "creata-sdk/MsgDelegate",
@@ -633,7 +633,7 @@
       "5 | Delegator [2/2] : 3vwtpl",
       "6 | Validator [1/2] : creatavaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
-      "7 | Memo : Zondax.ch",
+      "7 | Memo : creatachain",
       "8 | Fee : 5000 ucta",
       "9 | Gas : 200000"
     ],
@@ -653,7 +653,7 @@
         ],
         "gas": "200000"
       },
-      "memo": "Zondax.ch",
+      "memo": "creatachain",
       "msgs": [
         {
           "type": "creata-sdk/MsgDelegate",
@@ -681,7 +681,7 @@
       "5 | Delegator [2/2] : 3vwtpl",
       "6 | Validator [1/2] : creatavaloper1grgelyng2v6v3t8z87wu3sxgt",
       "6 | Validator [2/2] : 9m5s03xfytvz7",
-      "7 | Memo : Zondax.ch",
+      "7 | Memo : creatachain",
       "8 | Fee : 5000 ucta",
       "9 | Gas : 200000"
     ],
@@ -701,7 +701,7 @@
         ],
         "gas": "200000"
       },
-      "memo": "Zondax.ch",
+      "memo": "creatachain",
       "msgs": [
         {
           "type": "creata-sdk/MsgDelegate",
@@ -726,7 +726,7 @@
       "2 | Delegator [2/2] : 3vwtpl",
       "3 | Validator [1/2] : creatavaloper1grgelyng2v6v3t8z87wu3sxgt",
       "3 | Validator [2/2] : 9m5s03xfytvz7",
-      "4 | Memo : Zondax.ch",
+      "4 | Memo : creatachain",
       "5 | Fee : 0.005000 CTA"
     ],
     "expert": false
@@ -1743,7 +1743,7 @@
         ],
         "gas": "200000"
       },
-      "memo": "Zondax.ch",
+      "memo": "creatachain",
       "msgs": [
         {
           "type": "creata-sdk/MsgWithdrawValidatorCommission",
@@ -1760,7 +1760,7 @@
       "0 | Type : Withdraw Val. Commission",
       "1 | Validator [1/2] : creatavaloper1grgelyng2v6v3t8z87wu3sxgt",
       "1 | Validator [2/2] : 9m5s03xfytvz7",
-      "2 | Memo : Zondax.ch",
+      "2 | Memo : creatachain",
       "3 | Fee : 0.005000 CTA"
     ],
     "expert": false
