@@ -84,6 +84,7 @@ cmake-build-fuzz/
 !\deps/tinycbor
 !\deps/tinycbor-ledger
 !\deps/BLAKE
+!\deps/jsmn
 
 app/src/glyphs.c
 

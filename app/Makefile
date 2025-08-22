@@ -117,7 +117,7 @@ endif
 endif
 
 ifeq ($(HAVE_SWAP), 1)
-    $(info ************ HAVE_SWAP  = [ENABLED])
+    $(info ************ HAVE_SWAP  = [DISABLED])
     DEFINES += HAVE_SWAP=$(HAVE_SWAP)
 else
     $(info ************ HAVE_SWAP  = [DISABLED])
