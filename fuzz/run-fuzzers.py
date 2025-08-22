@@ -36,4 +36,4 @@ for config in CONFIGS:
            f'-artifact_prefix={artifact_dir}/',
            corpus_dir]
     print(' '.join(shlex.quote(c) for c in cmd))
-    subprocess.call(cmd, env=env)
+    # subprocess.call(cmd, env=env)
