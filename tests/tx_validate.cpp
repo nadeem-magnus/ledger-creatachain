@@ -220,7 +220,7 @@ namespace {
 // This test is currently failing the validation.
 // We are reviewing the validation code and creata serialization to find the culprit.
 
-    TEST(TxValidationTest, CosmosExample) {
+    TEST(TxValidationTest, CreatachainExample) {
         auto transaction =
             R"({"account_number":"0","chain_id":"test-chain-1","fee":{"amount":[{"amount":"5","denom":"photon"}],"gas":"10000"},"memo":"testmemo","msgs":[{"inputs":[{"address":"creataaccaddr1d9h8qat5e4ehc5","coins":[{"amount":"10","denom":"crta"}]}],"outputs":[{"address":"creataaccaddr1da6hgur4wse3jx32","coins":[{"amount":"10","denom":"crta"}]}]}],"sequence":"1"})";
 
@@ -234,7 +234,7 @@ namespace {
         EXPECT_EQ(err, parser_ok) << "Validation failed, error: " << parser_getErrorDescription(err);
     }
 
-    TEST(TxValidationTest, GaiaCLIissue) {
+    TEST(TxValidationTest, CreataCLIissue) {
         auto transaction = R"({"account_number":"811","chain_id":"creatahub-1","fee":{"amount":[],"gas":"5000000"},"memo":"","msgs":[{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj","value":{"amount":"8000000000","denom":"ucta"}}}],"sequence":"1"})";
 
         parsed_json_t json;
@@ -247,7 +247,7 @@ namespace {
         EXPECT_EQ(err, parser_ok) << "Validation failed, error: " << parser_getErrorDescription(err);
     }
 
-    TEST(TxValidationTest, GaiaCLIissueBigTX) {
+    TEST(TxValidationTest, CreataCLIissueBigTX) {
         auto transaction = R"({"account_number":"811","chain_id":"creatahub-1","fee":{"amount":[],"gas":"5000000"},"memo":"","msgs":[{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx",
   "validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx",
   "validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx","validator_address":"creatavaloper10e4vsut6suau8tk9m6dnrm0slgd6npe3jx5xpv","value":{"amount":"8000000000","denom":"ucta"}}},{"type":"creata-sdk/MsgDelegate","value":{"delegator_address":"creata13vfzpfmg6jgzfk4rke9glzpngrzucjtanq9awx",
