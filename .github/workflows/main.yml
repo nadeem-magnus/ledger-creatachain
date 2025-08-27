@@ -32,7 +32,7 @@ jobs:
     needs: configure
     runs-on: ubuntu-latest
     container:
-      image: zondax/builder-bolos:latest
+      image: zondax/ledger-app-builder:latest
       options: --user ${{ needs.configure.outputs.uid_gid }}
     env:
       BOLOS_SDK: ${{ github.workspace }}/deps/ledger-secure-sdk
