@@ -1,4 +1,4 @@
-TESTS_JS_PACKAGE = "ledger-creatachain-js"
+TESTS_JS_PACKAGE = "creatachain-js"
 TESTS_JS_DIR = $(CURDIR)/js
 
 ifeq ($(BOLOS_SDK),)

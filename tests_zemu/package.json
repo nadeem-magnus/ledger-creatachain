@@ -14,7 +14,7 @@
     "test": "yarn clean && jest --maxConcurrency 2"
   },
   "dependencies": {
-    "ledger-creatachain-js": "../js",
+    "creatachain-js": "../js",
     "@zondax/zemu": "^0.55.3"
   },
   "devDependencies": {

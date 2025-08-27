@@ -212,7 +212,7 @@ parser_error_t tx_indexRootFields() {
                     parser_tx_obj.tx_json.query.out_val_len,
                     0, &pageCount))
 
-            ZEMU_LOGF(200, "[ZEMU] %s : %s", tmp_key, parser_tx_obj.tx_json.query.out_val)
+            ZEMU_LOGF(200, "[CREATACHAIN] %s : %s", tmp_key, parser_tx_obj.tx_json.query.out_val)
 
             switch (root_item_idx) {
                 case root_item_memo: {
@@ -266,7 +266,7 @@ parser_error_t tx_indexRootFields() {
                         parser_tx_obj.tx_json.filter_msg_from_count++;
                     }
 
-                    ZEMU_LOGF(200, "[ZEMU] %s [%d/%d]", tmp_key, parser_tx_obj.tx_json.filter_msg_type_count, parser_tx_obj.tx_json.filter_msg_from_count);
+                    ZEMU_LOGF(200, "[CREATACHAIN] %s [%d/%d]", tmp_key, parser_tx_obj.tx_json.filter_msg_type_count, parser_tx_obj.tx_json.filter_msg_from_count);
                     break;
                 }
                 default:
