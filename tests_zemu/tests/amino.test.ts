@@ -1,7 +1,7 @@
 import Zemu, { ClickNavigation, TouchNavigation, isTouchDevice } from '@zondax/zemu'
 // @ts-ignore
-// import CreataApp from 'creatachain-js'
-import  CreataApp  from './../../js/src'
+import CreataApp from 'ledger-creatachain-js'
+// import  CreataApp  from './../../js/src'
 
 import {
   defaultOptions,

@@ -1,5 +1,6 @@
 import Zemu, { zondaxMainmenuNavigation, ButtonKind, isTouchDevice } from '@zondax/zemu'
-import  CreataApp  from './../../js/src'
+import CreataApp from 'ledger-creatachain-js'
+
 import { defaultOptions, DEVICE_MODELS } from './common'
 
 // @ts-ignore
